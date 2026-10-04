@@ -90,10 +90,11 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Hero ---------- */
 .hero { background: var(--butter); min-height: 100svh; padding-top: var(--nav-h); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
-.hero__title { position: relative; text-align: center; padding: clamp(150px, 22.5vw, 330px) 3vw 0; }
+.hero__title { position: relative; text-align: center; padding: clamp(110px, 30vw, 470px) 3vw 0; }
 .hero__label { display: block; text-align: left; font-family: var(--font-display); font-size: clamp(1.6rem, 4.4vw, 3.6rem); color: var(--slate); text-transform: uppercase; line-height: 1; margin-bottom: -0.1em; padding-left: .5vw; }
 .hero h1 { position: relative; z-index: 3; /* judul di depan foto supaya semua huruf tetap terbaca */ font-family: var(--font-display); font-weight: 400; text-transform: uppercase; color: var(--slate); font-size: clamp(3.8rem, 19vw, 15.5rem); line-height: .92; letter-spacing: .005em; }
-.hero__cutout { position: absolute; left: 50%; bottom: -6vw; width: clamp(220px, 36vw, 500px); aspect-ratio: 3 / 4; transform: translateX(-50%); z-index: 2; }
+.hero__cutout { position: absolute; left: 50%; bottom: -3vw; height: min(54vw, 860px); transform: translateX(-50%); z-index: 4; /* foto di depan tulisan */ }
+.hero__cutout img { position: static; width: auto; height: 100%; max-width: none; }
 .hero__cutout .ph, .niches__cutout .ph { background: rgba(80, 92, 150, .1); border: 2px dashed var(--slate); border-radius: var(--radius); }
 .hero__bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: clamp(18px, 3vw, 32px) var(--pad) clamp(28px, 4vw, 48px); }
 .hero__tagline { max-width: 340px; font-weight: 500; color: var(--slate); font-size: .98rem; line-height: 1.5; }
@@ -220,11 +221,6 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1100px) {
-  .niches__body { grid-template-columns: 1fr 1fr; }
-  .niches__text { grid-column: 1 / -1; text-align: center; }
-  .pills { width: calc(150% + var(--gap)); }
-  .niches__cutout { height: auto; aspect-ratio: 2 / 3; width: 100%; max-width: 420px; margin: 0; align-self: center; justify-self: center; }
-  .niches__cutout img { object-position: center bottom; }
 }
 
 @media (max-width: 1000px) {
@@ -252,15 +248,8 @@ button { font: inherit; cursor: pointer; }
   .nav__links.open { opacity: 1; transform: none; pointer-events: auto; }
   .nav__links a { padding: 14px 0; border-bottom: 0; }
   .hero { min-height: auto; }
-  .hero__title { padding-top: 74vw; }
-  .hero__cutout { width: 66vw; bottom: -1%; }
   .hero__bottom { justify-content: center; text-align: center; }
   .hero__tagline { max-width: none; }
-  .niches__body { grid-template-columns: 1fr; }
-  .pills { width: 100%; }
-  .pills { grid-template-columns: 1fr 1fr; }
-  .niches__cutout { width: 300px; margin: 0 auto; }
-  .bar { grid-template-columns: 1fr; }
 }
 
 /* roda proses ditumpuk di HP */
@@ -274,7 +263,6 @@ button { font: inherit; cursor: pointer; }
 
 @media (max-width: 480px) {
   .grid { gap: 8px; }
-  .pills { grid-template-columns: 1fr; }
 }
 
 /* ---------- Certificate ---------- */
@@ -286,3 +274,19 @@ button { font: inherit; cursor: pointer; }
 .cert__info h3 { font-family: var(--font-head); font-size: clamp(1.6rem, 3vw, 2.3rem); line-height: 1.1; text-transform: uppercase; margin: 8px 0 12px; }
 .cert__info p { line-height: 1.6; }
 @media (max-width: 760px) { .cert__card { grid-template-columns: 1fr; text-align: center; } }
+
+/* ---------- Design Niches: tampilan HP = tampilan laptop (diperkecil) ---------- */
+@media (max-width: 1100px) {
+  .niches__body { --gap: 2.2vw; --photo-w: 34vw; grid-template-columns: 30vw var(--photo-w) 1fr; }
+  .niches .big { margin-bottom: 4vw; }
+  .pills { gap: clamp(5px, 1vw, 12px); }
+  .pills li { gap: clamp(5px, 1vw, 14px); padding: clamp(6px, 1.2vw, 13px) clamp(7px, 1.4vw, 18px); border-radius: clamp(5px, .8vw, 8px); font-size: clamp(.56rem, 1.9vw, 1.05rem); letter-spacing: .05em; }
+  .pills li::before { width: clamp(7px, 1.1vw, 14px); height: clamp(7px, 1.1vw, 14px); border-width: 1.5px; border-radius: 3px; }
+  .niches__cutout { height: clamp(300px, 62vw, 900px); }
+  .niches__text .lead { font-size: clamp(.7rem, 2.2vw, 1.4rem); }
+  .niches__text .script { font-size: clamp(.95rem, 3vw, 1.9rem); }
+  .niches__text p { font-size: clamp(.58rem, 1.55vw, 1rem); margin-bottom: 1.2vw; line-height: 1.45; }
+  .bar { gap: 1vw; padding: clamp(10px, 2vw, 22px); }
+  .bar b { font-size: clamp(1.15rem, 3.6vw, 2rem); }
+  .bar span { font-size: clamp(.5rem, 1.3vw, .72rem); letter-spacing: .06em; }
+}
