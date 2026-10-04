@@ -87,3 +87,13 @@ filterBtns.forEach((btn) => {
 document.querySelectorAll("#galleryGrid .item img").forEach((img) => {
   img.closest(".item").style.setProperty("--bgimg", 'url("' + img.getAttribute("src") + '")');
 });
+
+// 8. Tinggi area bawah hero (tagline + ikon) dipakai untuk menempatkan foto & judul
+const heroEl = document.querySelector(".hero");
+function setHeroVars() {
+  const b = heroEl.querySelector(".hero__bottom");
+  heroEl.style.setProperty("--bh", b.offsetHeight + "px");
+}
+setHeroVars();
+window.addEventListener("resize", setHeroVars);
+window.addEventListener("load", setHeroVars);

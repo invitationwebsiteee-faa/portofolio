@@ -89,14 +89,14 @@ button { font: inherit; cursor: pointer; }
 .nav__toggle[aria-expanded="true"] span:last-child { top: 18px; transform: rotate(-45deg); }
 
 /* ---------- Hero ---------- */
-.hero { background: var(--butter); min-height: 100svh; padding-top: var(--nav-h); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden; }
-.hero__title { position: relative; text-align: center; padding: clamp(110px, 30vw, 470px) 3vw 0; }
+.hero { background: var(--butter); min-height: 100svh; padding-top: var(--nav-h); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;  position: relative; --bh: 150px; /* --bh = tinggi area tagline+ikon, diisi otomatis oleh script.js */ }
+.hero__title { --t: clamp(3.8rem, 19vw, 15.5rem); /* --t = tinggi huruf judul */ text-align: center; padding: max(calc(var(--t) * 1.2), calc(var(--bh) + 24px)) 3vw 0; }
 .hero__label { display: block; text-align: left; font-family: var(--font-display); font-size: clamp(1.6rem, 4.4vw, 3.6rem); color: var(--slate); text-transform: uppercase; line-height: 1; margin-bottom: -0.1em; padding-left: .5vw; }
-.hero h1 { position: relative; z-index: 3; /* judul di depan foto supaya semua huruf tetap terbaca */ font-family: var(--font-display); font-weight: 400; text-transform: uppercase; color: var(--slate); font-size: clamp(3.8rem, 19vw, 15.5rem); line-height: .92; letter-spacing: .005em; }
-.hero__cutout { position: absolute; left: 50%; bottom: -3vw; height: min(54vw, 860px); transform: translateX(-50%); z-index: 4; /* foto di depan tulisan */ }
-.hero__cutout img { position: static; width: auto; height: 100%; max-width: none; }
+.hero h1 { position: relative; z-index: 3; /* judul di depan foto supaya semua huruf tetap terbaca */ font-family: var(--font-display); font-weight: 400; text-transform: uppercase; color: var(--slate); font-size: var(--t); line-height: .92; letter-spacing: .005em; }
+.hero__cutout { position: absolute; left: 50%; bottom: 0; /* foto menempel sampai batas bawah area kuning */ height: calc(var(--bh) * 2 + var(--t)); /* judul pas di tengah foto */ overflow: hidden; /* crop: hanya bagian atas badan yang terlihat */ transform: translateX(-50%); z-index: 4; pointer-events: none; }
+.hero__cutout img { position: static; display: block; width: auto; height: 200%; /* 200% = foto diperbesar 2x lalu dicrop; ubah 170%-230% untuk atur crop */ max-width: none; }
 .hero__cutout .ph, .niches__cutout .ph { background: rgba(80, 92, 150, .1); border: 2px dashed var(--slate); border-radius: var(--radius); }
-.hero__bottom { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: clamp(18px, 3vw, 32px) var(--pad) clamp(28px, 4vw, 48px); }
+.hero__bottom { position: relative; z-index: 5; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; padding: clamp(18px, 3vw, 32px) var(--pad) clamp(28px, 4vw, 48px); }
 .hero__tagline { max-width: 340px; font-weight: 500; color: var(--slate); font-size: .98rem; line-height: 1.5; }
 .icons { display: flex; gap: 12px; }
 .icons a {
@@ -248,8 +248,10 @@ button { font: inherit; cursor: pointer; }
   .nav__links.open { opacity: 1; transform: none; pointer-events: auto; }
   .nav__links a { padding: 14px 0; border-bottom: 0; }
   .hero { min-height: auto; }
-  .hero__bottom { justify-content: center; text-align: center; }
-  .hero__tagline { max-width: none; }
+  .hero__bottom { flex-wrap: nowrap; gap: 3vw; align-items: flex-end; }
+  .hero__tagline { max-width: 36vw; font-size: clamp(.58rem, 2.3vw, .98rem); line-height: 1.4; }
+  .icons { gap: 6px; }
+  .icons a { width: 8.5vw; height: 8.5vw; min-width: 30px; min-height: 30px; font-size: .7rem; }
 }
 
 /* roda proses ditumpuk di HP */
