@@ -301,11 +301,11 @@ button { font: inherit; cursor: pointer; }
   .hero__cutout { height: calc(100svh - var(--nav-h) - 8px); min-height: calc(560px - var(--nav-h) - 8px); }
 }
 
-/* ---------- Hero di HP: satu layar penuh, foto dicrop setengah badan ---------- */
+/* ---------- Hero di HP: foto dicrop sampai pinggang, tanpa ruang kosong ---------- */
 @media (max-width: 760px) {
-  .hero { min-height: 100svh; }
-  .hero__title { --t: 24vw; padding-top: 0; margin-bottom: 26svh; /* naik-turunkan judul: makin besar = judul makin ke atas */ }
-  .hero__cutout { height: calc(100svh - var(--nav-h) - 8px); }
-  .hero__cutout img { height: 220%; /* zoom foto: makin besar = makin dekat (crop makin banyak) */ }
-  .hero__tagline { text-shadow: 0 0 6px var(--butter), 0 0 3px var(--butter); max-width: 46vw; font-size: clamp(.5rem, 2.2vw, .98rem); line-height: 1.35; }
+  .hero { --V: 64svh; /* --V = tinggi foto yang terlihat (kepala sampai pinggang). Besar/kecil foto: ubah angka ini */ min-height: calc(var(--nav-h) + var(--V) + 8px); height: auto; }
+  .hero__title { --t: 24vw; padding-top: 0; margin-bottom: 0; }
+  .hero__cutout { height: var(--V); }
+  .hero__cutout img { height: 210%; /* crop sampai pinggang: makin besar = crop makin ke atas */ }
+  .hero__tagline { text-shadow: 0 0 6px var(--butter), 0 0 3px var(--butter); max-width: 36vw; font-size: clamp(.5rem, 2.2vw, .98rem); line-height: 1.35; }
 }
