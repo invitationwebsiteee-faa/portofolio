@@ -90,8 +90,8 @@ button { font: inherit; cursor: pointer; }
 
 /* ---------- Hero ---------- */
 .hero { background: var(--butter); min-height: 100svh; padding-top: var(--nav-h); display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;  position: relative; --bh: 150px; /* --bh = tinggi area tagline+ikon, diisi otomatis oleh script.js */ }
-.hero__title { --t: clamp(3.8rem, 19vw, 15.5rem); /* --t = tinggi huruf judul */ text-align: center; padding: max(calc(var(--t) * 1.2), calc(var(--bh) + 24px)) 3vw 0; }
-.hero__label { display: block; text-align: left; font-family: var(--font-display); font-size: clamp(1.6rem, 4.4vw, 3.6rem); color: var(--slate); text-transform: uppercase; line-height: 1; margin-bottom: -0.1em; padding-left: .5vw; }
+.hero__title { --t: clamp(3.8rem, 23vw, 19rem); /* --t = tinggi huruf judul */ display: grid; justify-content: center; text-align: center; padding: max(calc(var(--t) * 1.2), calc(var(--bh) + 24px)) 3vw 0; }
+.hero__label { display: block; text-align: left; font-family: var(--font-display); font-size: calc(var(--t) * .17); color: var(--slate); text-transform: uppercase; line-height: 1; margin-bottom: calc(var(--t) * .02); /* sejajar dengan huruf P */ padding-left: 0; }
 .hero h1 { position: relative; z-index: 3; /* judul di depan foto supaya semua huruf tetap terbaca */ font-family: var(--font-display); font-weight: 400; text-transform: uppercase; color: var(--slate); font-size: var(--t); line-height: .92; letter-spacing: .005em; }
 .hero__cutout { position: absolute; left: 50%; bottom: 0; /* foto menempel sampai batas bawah area kuning */ height: calc(var(--bh) * 2 + var(--t)); /* judul pas di tengah foto */ overflow: hidden; /* crop: hanya bagian atas badan yang terlihat */ transform: translateX(-50%); z-index: 4; pointer-events: none; }
 .hero__cutout img { position: static; display: block; width: auto; height: 200%; /* 200% = foto diperbesar 2x lalu dicrop; ubah 170%-230% untuk atur crop */ max-width: none; }
@@ -249,9 +249,10 @@ button { font: inherit; cursor: pointer; }
   .nav__links a { padding: 14px 0; border-bottom: 0; }
   .hero { min-height: auto; }
   .hero__bottom { flex-wrap: nowrap; gap: 3vw; align-items: flex-end; }
-  .hero__tagline { max-width: 36vw; font-size: clamp(.58rem, 2.3vw, .98rem); line-height: 1.4; }
-  .icons { gap: 6px; }
-  .icons a { width: 8.5vw; height: 8.5vw; min-width: 30px; min-height: 30px; font-size: .7rem; }
+  .hero__tagline { max-width: 31vw; font-size: clamp(.5rem, 2.15vw, .98rem); line-height: 1.35; }
+  .icons { gap: 4px; }
+  .icons a { width: 7.2vw; height: 7.2vw; min-width: 26px; min-height: 26px; border-width: 1.5px; font-size: .62rem; }
+  .icons svg { width: max(14px, 3.8vw); height: max(14px, 3.8vw); }
 }
 
 /* roda proses ditumpuk di HP */
