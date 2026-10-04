@@ -301,10 +301,11 @@ button { font: inherit; cursor: pointer; }
   .hero__cutout { height: calc(100svh - var(--nav-h) - 8px); min-height: calc(560px - var(--nav-h) - 8px); }
 }
 
-/* ---------- Hero di HP: juga satu layar penuh ---------- */
+/* ---------- Hero di HP: satu layar penuh, foto dicrop setengah badan ---------- */
 @media (max-width: 760px) {
   .hero { min-height: 100svh; }
-  .hero__title { padding-top: 0; margin-bottom: 27svh; /* naik-turunkan judul: makin besar = judul makin ke atas */ }
+  .hero__title { --t: 24vw; padding-top: 0; margin-bottom: 33svh; /* naik-turunkan judul: makin besar = judul makin ke atas */ }
   .hero__cutout { height: calc(100svh - var(--nav-h) - 8px); }
-  .hero__cutout img { height: 108%; /* besar foto: makin besar = makin zoom */ }
+  .hero__cutout img { height: 118%; /* zoom foto: makin besar = makin dekat (crop makin banyak) */ }
+  .hero__tagline { max-width: 46vw; font-size: clamp(.5rem, 2.2vw, .98rem); line-height: 1.35; }
 }
