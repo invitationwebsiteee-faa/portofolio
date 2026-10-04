@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- EDIT: judul tab & deskripsi (muncul di Google) -->
+  <title>Silfa | Design Portofolio</title>
+  <meta name="description" content="Portfolio of Silfa: social media design and clean front-end websites." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Oswald:wght@500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__logo">Silfa<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#work">My Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__title">
+        <span class="hero__label">Design</span>
+        <h1>Portofolio</h1>
+        <!-- Foto cutout (PNG transparan) menimpa huruf judul -->
+        <div class="hero__cutout">
+          <span class="ph">Foto cutout PNG transparan<br /><small>foto/silfa-cutout.png</small></span>
+          <img src="foto/silfa-cutout.png" alt="Silfa" onerror="this.remove()" />
+        </div>
+      </div>
+
+      <div class="hero__bottom">
+        <p class="hero__tagline">Creating clean, on-brand design that helps brands build trust and look consistent online.</p>
+        <!-- EDIT: ganti href dengan link profilmu -->
+        <ul class="icons">
+          <li><a href="https://www.instagram.com/iyaastudiooo?stkn=MWNoOGJzY2Y5dmVoMQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.tiktok.com/@panggil.faaaaa" target="_blank" rel="noopener" aria-label="TikTok">Tk</a></li>
+          <li><a href="https://linkedin.com/in/silfa-puspita-009872350" target="_blank" rel="noopener" aria-label="LinkedIn">in</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about slate" id="about">
+      <div class="about__text reveal">
+        <h2>Hi, I'm Silfa</h2>
+        <!-- EDIT: ceritakan dirimu. Tulisan di bawah hanya contoh. -->
+        <p>I'm a designer and front-end developer who creates clean social media graphics and simple websites for brands in education, lifestyle, and small business.</p>
+        <p class="strong">I believe good design should feel clear, consistent, and true to the brand.</p>
+
+        <!-- EDIT: ganti "00" dengan angka aslimu (tahun pengalaman, jumlah klien, dll). -->
+        <ul class="stats">
+          <li><b>3+</b><span>Projects<br />built</span></li>
+          <li><b>3</b><span>Services<br />offered</span></li>
+          <li><b>15–20</b><span>Hours / week<br />available</span></li>
+        </ul>
+
+        <!-- EDIT: nama brand / klien yang pernah kamu kerjakan -->
+        <div class="trusted">
+          <small>Tools I use</small>
+          <div class="trusted__list"><span>Canva</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>CapCut</span></div>
+        </div>
+      </div>
+
+      <div class="about__photo reveal">
+        <div class="frame">
+          <span class="ph">Foto kedua<br /><small>foto/about.jpg</small></span>
+          <img src="foto/about.jpg" alt="Silfa" onerror="this.remove()" />
+          <span class="script">get to know me</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DESIGN NICHES ============ -->
+    <section class="niches" id="niches">
+      <h2 class="big reveal">Design Niches</h2>
+
+      <div class="niches__body">
+        <ul class="pills reveal">
+          <!-- EDIT: bidang desain yang kamu kuasai -->
+          <li>Social Media</li>
+          <li>Branding</li>
+          <li>Education</li>
+          <li>Websites</li>
+        </ul>
+
+        <div class="niches__cutout reveal">
+          <span class="ph">Foto cutout 2<br /><small>foto/niches-cutout.png</small></span>
+          <img src="foto/niches-cutout.png" alt="" onerror="this.remove()" />
+        </div>
+
+        <div class="niches__text reveal">
+          <p class="lead">As a designer, I bring an</p>
+          <p class="script">authentic and thoughtful perspective</p>
+          <p>that connects with a wide range of audiences.</p>
+          <p>I'm a self-taught designer and front-end developer, and I bring the same level of creativity and care to every project.</p>
+        </div>
+      </div>
+
+      <!-- EDIT: ganti angka -->
+      <ul class="bar reveal">
+        <li><b>3</b><span>Services offered</span></li>
+        <li><b>15–20</b><span>Hours / week available</span></li>
+        <li><b>100%</b><span>On-brand work</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ MY WORK (GALLERY) ============ -->
+    <section class="gallery slate" id="work">
+      <div class="head reveal">
+        <p class="eyebrow">Portfolio Gallery</p>
+        <h2 class="big">My Work</h2>
+        <p class="sub">A selection of recent designs and websites created for brands across social media, education, and lifestyle.</p>
+      </div>
+
+      <div class="filters reveal" role="tablist" aria-label="Filter karya">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="social">Social Media</button>
+        <button data-filter="web">Websites</button>
+        <button data-filter="ads">Ads</button>
+      </div>
+
+      <!-- EDIT: tiap .item = 1 karya. data-cat menentukan kategori filter.
+           Ganti nama file di src dengan gambarmu di folder foto/ -->
+      <div class="grid" id="galleryGrid">
+        <figure class="item" data-cat="social"><span class="ph">Karya 1<br /><small>foto/work-1.jpg</small></span><img src="foto/karya 1.png" alt="" onerror="this.remove()" /><figcaption>Social media post</figcaption></figure>
+        <figure class="item" data-cat="web"><span class="ph">Karya 4<br /><small>foto/work-4.jpg</small></span><img src="foto/web 1.png" alt="" onerror="this.remove()" /><figcaption>Website design</figcaption></figure>
+        <figure class="item" data-cat="ads"><span class="ph">Karya 5<br /><small>foto/work-5.jpg</small></span><img src="foto/Skincare Booster.jpg" alt="" onerror="this.remove()" /><figcaption>Digital ad</figcaption></figure>
+        <figure class="item" data-cat="social"><span class="ph">Karya 6<br /><small>foto/work-6.jpg</small></span><img src="foto/scrapbook-hero.jpg" alt="" onerror="this.remove()" /><figcaption>Story set</figcaption></figure>
+        <figure class="item" data-cat="web"><span class="ph">Karya 8<br /><small>foto/work-8.jpg</small></span><img src="foto/undangan-1.jpg" alt="" onerror="this.remove()" /><figcaption>Digital invitation</figcaption></figure>
+        <figure class="item" data-cat="web"><span class="ph">Karya 9<br /><small>foto/work-8.jpg</small></span><img src="foto/web 2.png" alt="" onerror="this.remove()" /><figcaption>Website Design</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- ============ SERTIFIKAT ============ -->
+    <section class="cert" id="cert">
+      <h2 class="mid reveal">Certificate</h2>
+      <div class="cert__card reveal">
+        <a class="cert__img" href="foto/setifikat.jpg" target="_blank" rel="noopener">
+          <span class="ph">Sertifikat<br /><small>foto/sertifikat.jpg</small></span>
+          <img src="foto/setifikat.jpg" alt="Certificate of Participation, The Freelance Starter Program, BebasKerja.co" onerror="this.remove()" />
+        </a>
+        <div class="cert__info">
+          <p class="eyebrow">BebasKerja.co &middot; 2026</p>
+          <h3>The Freelance Starter Program</h3>
+          <p>Certificate of Participation. Online training covering the fundamentals of starting a freelance career, 18 August &ndash; 2 September 2026.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CREATIVE PROCESS ============ -->
+    <section class="process" id="process">
+      <h2 class="mid reveal">My Creative Process</h2>
+
+      <div class="chart reveal">
+        <svg class="chart__svg" viewBox="0 0 300 300" aria-hidden="true">
+          <!-- garis putus-putus penghubung -->
+          <g class="dash">
+            <line x1="155.9" y1="39.1" x2="300" y2="39.1" />
+            <line x1="220.9" y1="104.1" x2="300" y2="104.1" />
+            <line x1="220.9" y1="195.9" x2="300" y2="195.9" />
+            <line x1="155.9" y1="260.9" x2="300" y2="260.9" />
+          </g>
+          <!-- roda 4 segmen -->
+          <path class="seg s1" d="M110.0 30.0 A120 120 0 0 1 194.9 65.1 L152.4 107.6 A60 60 0 0 0 110.0 90.0 Z" />
+          <path class="seg s2" d="M194.9 65.1 A120 120 0 0 1 230.0 150.0 L170.0 150.0 A60 60 0 0 0 152.4 107.6 Z" />
+          <path class="seg s1" d="M230.0 150.0 A120 120 0 0 1 194.9 234.9 L152.4 192.4 A60 60 0 0 0 170.0 150.0 Z" />
+          <path class="seg s2" d="M194.9 234.9 A120 120 0 0 1 110.0 270.0 L110.0 210.0 A60 60 0 0 0 152.4 192.4 Z" />
+          <g class="nums">
+            <text x="144.4" y="67">1</text><text x="193.1" y="116">2</text>
+            <text x="193.1" y="184.5">3</text><text x="144.4" y="233">4</text>
+          </g>
+          <circle class="hub" cx="110" cy="150" r="48" />
+          <circle class="hub__in" cx="110" cy="150" r="30" />
+          <text class="hub__t" x="110" y="159" text-anchor="middle">&#10043;</text>
+        </svg>
+
+        <ol class="steps">
+          <li class="step step--1"><b>01</b><div><h3>Discovery</h3><p>Learning about your brand, audience, and goals.</p></div></li>
+          <li class="step step--2"><b>02</b><div><h3>Planning</h3><p>Developing the concept, layout, and style direction.</p></div></li>
+          <li class="step step--3"><b>03</b><div><h3>Design</h3><p>Creating, refining, and polishing every detail.</p></div></li>
+          <li class="step step--4"><b>04</b><div><h3>Delivery</h3><p>Final files ready for your channels and team.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ AJAKAN KERJA SAMA ============ -->
+    <section class="cta-sec slate" id="cta">
+      <div class="cta reveal">
+        <p><b>Clean design, consistent brand, real impact.</b><br />Let's create something that tells your brand story clearly.</p>
+        <a class="btn" href="#contact">Let's work together &rarr;</a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="contact__box reveal">
+        <p class="eyebrow">Open for opportunities</p>
+        <h2 class="big">Let's Connect</h2>
+        <p class="sub">Have a project, a team to join, or just want to say hi? I'd love to hear from you.</p>
+        <a class="btn btn--slate" href="mailto:silfapuspita12@gmail.com">silfapuspita12@gmail.com</a>
+        <ul class="socials">
+          <li><a href="https://www.instagram.com/iyaastudiooo?stkn=MWNoOGJzY2Y5dmVoMQ%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.tiktok.com/@panggil.faaaaa" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.upwork.com/freelancers/~01112b8bd0ced72c60?mp_source=share" target="_blank" rel="noopener">Upwork</a></li>
+          <li><a href="https://linkedin.com/in/silfa-puspita-009872350" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <p class="avail">Available part-time &middot; Singapore (UTC+8)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Silfa. Designed &amp; coded with care.</p>
+    <a href="#home">Back to top &uarr;</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
